@@ -39,7 +39,9 @@ public class ViewCustomerEdit {
 
         String name = "Renu";
 
-        driver.findElement(By.xpath("//tr[  td[text()='"+name+"']  ]//input")).click();
+  //      driver.findElement(By.xpath("//tr[  td[text()='"+name+"']  ]//input")).click();
 
+
+        driver.findElement(By.xpath("//tr[  td[text()='"+name+"'] ]//a[ contains( @href ,'update')]")).click();
     }
 }
