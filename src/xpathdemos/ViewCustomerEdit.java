@@ -1,5 +1,6 @@
 package xpathdemos;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,7 +10,7 @@ import java.time.Duration;
 
 public class ViewCustomerEdit {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
        // WebDriver driver = new ChromeDriver();
        // WebDriver driver = new FirefoxDriver();
@@ -42,6 +43,13 @@ public class ViewCustomerEdit {
   //      driver.findElement(By.xpath("//tr[  td[text()='"+name+"']  ]//input")).click();
 
 
-        driver.findElement(By.xpath("//tr[  td[text()='"+name+"'] ]//a[ contains( @href ,'update')]")).click();
+        driver.findElement(By.xpath("//tr[  td[text()='"+name+"'] ]//a[ contains( @href ,'delete')]")).click();
+
+        Thread.sleep(4000);
+        Alert alert = driver.switchTo().alert();
+        System.out.println(alert.getText());
+       // alert.accept();
+        alert.dismiss();
+
     }
 }
