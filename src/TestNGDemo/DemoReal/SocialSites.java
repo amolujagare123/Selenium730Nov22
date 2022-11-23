@@ -2,6 +2,7 @@ package TestNGDemo.DemoReal;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -34,6 +35,9 @@ public class SocialSites {
     public void linkedin()
     {
         driver.get("http://linkedin.com");
+
+        Assert.assertEquals(driver.getTitle(),"lnkedIn",
+                "this is not a linked in page");
     }
 
     @Test
