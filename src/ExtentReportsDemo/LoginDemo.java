@@ -48,6 +48,7 @@ public class LoginDemo {
 
     @Test
     public void loginTest1() throws IOException {
+
         ExtentTest test = extent.createTest("Valid login Test");
 
         WebDriver driver = new ChromeDriver();

@@ -1,27 +1,15 @@
 package TestNGDemo.DemoReal;
 
+import TestNGDemo.DemoReal.util.InitBrowser;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TutorialsSites {
+public class TutorialsSites extends InitBrowser  {
 
-    WebDriver driver;
 
-    @BeforeClass // this method will run before first test of this class
-    public void openBrowser()
-    {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass // this method will run after last test of this class
-    public void closeBrowser() throws InterruptedException {
-        Thread.sleep(4000);
-        driver.close();
-    }
 
 
     @Test
@@ -30,7 +18,7 @@ public class TutorialsSites {
         driver.get("http://scriptinglogic.com");
     }
 
-    @Test
+ /*   @Test
     public void javatpoint()
     {
         driver.get("http://javatpoint.com");
@@ -40,7 +28,7 @@ public class TutorialsSites {
     public void tutorialspoint()
     {
         driver.get("https://www.tutorialspoint.com/");
-    }
+    }*/
 
     @Test
     public void w3schools()
