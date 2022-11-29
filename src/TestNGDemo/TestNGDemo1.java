@@ -60,4 +60,5 @@ public class TestNGDemo1 {
         WebElement btnLogin = driver.findElement(By.name("submit"));
         btnLogin.click();
     }
+
 }
